@@ -1,0 +1,55 @@
+$size-icon: (
+  '14x14': (
+    w: 14,
+    h: 14
+  ),
+  '16x16': (
+    w: 16,
+    h: 16
+  ),
+  '18x18': (
+    w: 18,
+    h: 18
+  ),
+  '20x20': (
+    w: 20,
+    h: 20
+  ),
+  '24x24': (
+    w: 24,
+    h: 24
+  ),
+  '10x10': (
+    w: 10,
+    h: 10
+  ),
+  '40x40': (
+    w: 40,
+    h: 40
+  )
+);
+
+$icon-src: (
+  'user': icon-path-generation('user.svg'),
+  'power_off': icon-path-generation('power_off.svg')
+);
+
+.a-icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+
+  @each $size, $val in $size-icon {
+    &-#{$size} {
+      height: map-get($val, 'h') + px;
+      width: map-get($val, 'w') + px;
+    }
+  }
+
+  @each $icon, $val in $icon-src {
+    &-#{$icon} {
+      background-image: url($val);
+    }
+  }
+}
