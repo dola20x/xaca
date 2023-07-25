@@ -459,6 +459,7 @@ export const exampleSlice = createSlice({
 | **revert**   |                          |                                                                                                             |
 | **style**    | 💄 :lipstick:            | Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)      |
 | **test**     | 🚨 :rotating_light:      | Adding missing tests or correcting existing tests                                                           |
+| **draft**    | 🚧 :construction:        | Work In Progress                                                                                            |
 
 **Emoji** <https://gist.github.com/parmentf/035de27d6ed1dce0b36a>
 
